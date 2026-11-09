@@ -31,7 +31,7 @@ On benign-only periods, Isolation Forest produced 36 false alerts across 1,399 o
 
 The four Kibana dashboards each contain eight panels (32 linked visualizations total), including KPI cards, time series, donut breakdowns, and ranked bars. The optional Spark jobs write feature and finding indices that match the existing Kibana data-view wildcards (`cyber-features*`, `cyber-findings*`). Re-run `scripts/provision_kibana.py` after changing saved-object definitions.
 
-The editable architecture diagram is `diagrams/cyberlab-architecture.drawio`; it was generated with the requested Next AI Draw.io workflow and can also be opened in diagrams.net.
+The editable main pipeline diagram is `diagrams/cyberlab-architecture.drawio` and can be opened in diagrams.net. The host-side SOC/API/React/Streamlit data paths are documented separately in [`docs/soc-architecture.html`](docs/soc-architecture.html). See [`docs/architecture-overview.md`](docs/architecture-overview.md) for the combined as-built view and trust boundaries.
 
 ## Architecture
 
