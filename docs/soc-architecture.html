@@ -31,7 +31,7 @@
 <main>
   <div class="eyebrow">Cyber Threat Detection Lab · Local SOC workspace</div>
   <h1>Evidence-first SOC architecture</h1>
-  <p class="intro">Two distinct data lanes: a verified, historical expanded benchmark for analysis, and an existing optional streaming stack whose services are checked at runtime. The dashboard never labels benchmark/replay evidence as live traffic.</p>
+  <p class="intro">Two distinct data lanes: a verified, historical expanded benchmark for analysis, and an existing optional streaming stack whose services are checked at runtime. Streamlit can optionally embed the React SOC route; the React UI still talks to its read-only API. The dashboard never labels benchmark/replay evidence as live traffic.</p>
   <div class="canvas">
   <svg viewBox="0 0 1600 850" role="img" aria-labelledby="diagramTitle diagramDesc" xmlns="http://www.w3.org/2000/svg">
     <title id="diagramTitle">Cyber Threat Detection Lab SOC platform architecture</title>
@@ -54,6 +54,7 @@
     <path class="edge" d="M575 390H755V288"/><path class="edge" d="M895 390H920V254H940"/>
     <path class="edge-dash" d="M1060 474V520H1080V300"/>
     <path class="edge-dash" d="M1370 478V514H1455V300"/>
+    <path class="edge-dash" d="M1450 345V309"/>
     <!-- Cards -->
     <rect class="card c-amber" x="48" y="105" width="219" height="95" rx="12"/>
     <text class="tag" x="66" y="129" fill="#f5bd65">BENCHMARK SOURCE</text><text class="title" x="66" y="155">CICIDS2017</text><text class="body" x="66" y="178">8 full-week CSV files</text>
@@ -74,7 +75,7 @@
     <rect class="card" x="940" y="345" width="245" height="131" rx="12"/>
     <text class="tag" x="960" y="369" fill="#9aabc0">RUNTIME HEALTH PROBES</text><text class="body" x="960" y="395">Elasticsearch · Kibana</text><text class="body" x="960" y="417">Kafka · Spark · Streamlit</text><text class="small" x="960" y="449">Reachability ≠ ingestion or freshness</text>
     <rect class="card c-cyan" x="1230" y="345" width="300" height="133" rx="12"/>
-    <text class="tag" x="1251" y="369" fill="#63d3e8">EXISTING REPORTING APP</text><text class="title" x="1251" y="397">Streamlit workspace</text><text class="body" x="1251" y="422">Read-only benchmark + bounded analysis</text><text class="small" x="1251" y="449">Linked separately; status is probed live</text>
+    <text class="tag" x="1251" y="369" fill="#63d3e8">EXISTING REPORTING APP</text><text class="title" x="1251" y="397">Streamlit workspace</text><text class="body" x="1251" y="422">Read-only benchmark + bounded analysis</text><text class="small" x="1251" y="449">Optional iframe embed of React SOC</text>
     <text class="small" x="48" y="514">Separate raw-flow rows (4,553,532) from aggregated feature windows (197,941); experiment metrics never become synthetic flow events.</text>
     <!-- Existing stream processing lane -->
     <rect class="zone" x="22" y="582" width="1556" height="240" rx="18"/>
